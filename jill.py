@@ -9,7 +9,7 @@ parser.add_argument('dict')
 # Gives args a parser argument
 args = parser.parse_args()
 # Opens password file in read mode
-pswds = open(args.passfile, "r")
+pswds = open(args.pswdfile, "r")
 # Opens word list in read mode
 word_list = open(args.dict, "r")
 # Reads through password file 
