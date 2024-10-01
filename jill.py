@@ -13,9 +13,9 @@ pswds = open(args.pswdfile, "r")
 # Opens word list in read mode
 word_list = open(args.dict, "r")
 # Reads through password file 
-pswd_split = passwords.readlines()
+pswd_split = pswds.readlines()
 # Reads through word list
-word_split = dictionary_file.readlines()
+word_split = word_list.readlines()
 # Creates for loop
 for hash in pswd_split:
     # Splits the : from the username and password
