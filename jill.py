@@ -1,33 +1,28 @@
 import argparse
 import hashlib
-# Create a empty list called encrypted to put encrypted passwords into
-encrypted = []
-# Create a empty list called names to put names into
-names = []
-# Empty list to 
-output = []
-
-def parse_folder():
-
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument("password_file")
-
-    parser.add_argument("word_list")
-
-    args = parser.parse_args()
-
-def opening():
-
-    with open(args.password_file) as f
-
-    freading = f.read()
-    
-def loading():
-
-    for encrypted in list:
-
-        names.append(encrypted.split(":")[0])
-
-        try:
-            encrypted.append(hash.split)
+# Parses through argument
+parser = argparse.ArgumentParser()
+# Goes through password file
+parser.add_argument('pswdfile')
+# Goes through word list
+parser.add_argument('dict')
+# Gives args a parser argument
+args = parser.parse_args()
+# Opens password file in read mode
+pswds = open(args.passfile, "r")
+# Opens word list in read mode
+word_list = open(args.dict, "r")
+# Reads through password file 
+pswd_split = passwords.readlines()
+# Reads through word list
+word_split = dictionary_file.readlines()
+# Creates for loop
+for hash in pswd_split:
+    # Splits the : from the username and password
+    hash = hash.split(":")
+    # Creates for loop
+    for pw in word_split:
+    # If the password is sha256 it strips all the white spaces and then encodes the string into a hexadecimal and then compares it
+        if hashlib.sha256(pw.strip().encode()).hexdigest() == hash[1].strip():
+            #Prints the result if it matches the password
+            print(f'{hash[0]}:{pw.strip()}')
